@@ -12,6 +12,16 @@ osx and linux dotfiles
 - [x] youtube-dl
 - [x] ffmpeg
 
+## linux
+
+clash for linux is important
+should have config.yaml by visit subscribe url download
+should have country.mmdb found in github `Dreamacro/maxmind-geoip`
+should modify explorer proxy setting in manual proxy fit in ftp https port:7890 and socks5 port:7891
+and zshrc
+
+[link](https://instruction.lnds.top/software/linux/clash)
+
 ## nixos
 
 nixos 目前来看是可以当作养老的 linux 版本.
