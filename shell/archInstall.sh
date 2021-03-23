@@ -97,7 +97,7 @@ function cfg_boot(){
 function install_program(){
     arch_chroot "pacman -S which git wget curl dialog wpa_supplicant ntfs-3g networkmanager --noconfirm"
     arch_chroot "systemctl enable NetworkManager"
-    arch_chroot "curl https://raw.githubusercontent.com/shun-sfoo/dotfiles/main/shell/archDesktop.sh > $HOME/archDesktop.sh"
+    # arch_chroot "curl https://raw.githubusercontent.com/shun-sfoo/dotfiles/main/shell/archDesktop.sh > $HOME/archDesktop.sh"
 }
 
 function cfg_user(){

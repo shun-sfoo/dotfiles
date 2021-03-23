@@ -2,17 +2,7 @@
 
 osx and linux dotfiles
 
-## apple
-
-### 建议安装的软件 by homebrew
-
-- [x] rbenv
-- [x] pyenv
-- [x] font-meslo-lg-nerd-font `brew tap homebrew/cask-fonts brew cask install font-meslo-lg-nerd-font`
-- [x] iina
-- [x] autojump
-- [x] ripgrep
-- [x] fzf
+## osx
 
 ### 不要安装的应用
 
@@ -21,3 +11,37 @@ osx and linux dotfiles
 - [x] neofetch
 - [x] youtube-dl
 - [x] ffmpeg
+
+## nixos
+
+nixos 目前来看是可以当作养老的 linux 版本.
+
+## nixos 开发环境
+
+nixos 通过 nix-shell 命令需要环境中的 default.nix 或者 shell.nix
+配置文件生成配置中的开发环境，类似于 docker.
+各配置文件参考文档.
+也可以生成纯净环境,类似于`nix-shell -p rustc cargo`
+
+## arch
+
+archlinux dotfiles
+
+### format
+
+better format is parted see nixos installationo
+
+### connect wifi
+
+```shell
+ip link
+ip link set $device up
+iwlist $device scan |grep ESSID
+wpa_passphrase $wifi_name $password > $netfilename (iwctl)
+wpa_supplicant -c $netfilename -i $device &
+```
+
+### dwm patches
+
+alpha
+hide-vacant-tags
