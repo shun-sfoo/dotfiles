@@ -12,6 +12,8 @@ brew "exa"
 brew "fd"
 # Distributed revision control system
 brew "git"
+# Render markdown on the CLI
+brew "glow"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Command-line tool for generating regular expressions

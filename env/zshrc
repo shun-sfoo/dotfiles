@@ -10,6 +10,7 @@ alias tree="exa -T --icons"
 alias vi="nvim"
 alias vim="nvim"
 alias reload="source ~/.zshrc"
+alias demacs="emacs --dump-file='/Users/neo/.config/emacs/emacs.pdmp'"
 
 ## starship
 eval "$(starship init zsh)"
