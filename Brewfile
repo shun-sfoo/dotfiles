@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "universal-ctags/universal-ctags"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Platform built on V8 to build network applications
@@ -44,6 +45,8 @@ brew "tealdeer"
 brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Maintained ctags implementation
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "font-meslo-lg-nerd-font"
 # Free and open-source media player
 cask "iina"
