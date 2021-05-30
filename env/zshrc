@@ -9,6 +9,7 @@ alias la="exa -la --icons"
 alias tree="exa -T --icons"
 alias vi="nvim"
 alias vim="nvim"
+alias cat="bat"
 alias reload="source ~/.zshrc"
 alias demacs="emacs --dump-file='/Users/neo/.config/emacs/emacs.pdmp'"
 
