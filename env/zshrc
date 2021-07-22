@@ -6,7 +6,7 @@ alias ipi="curl cip.cc"
 alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
-alias tree="exa -T --icons"
+alias tree="exa -T --icons --git-ignore"
 alias vi="nvim"
 alias vim="nvim"
 alias cat="bat"
@@ -61,3 +61,5 @@ zinit light hlissner/zsh-autopair
 zinit ice depth=1 wait"2" lucid
 zinit light MichaelAquilina/zsh-you-should-use
 ### End of Zinit's installer chunk
+
+alias luamake=/Users/bruce/build/lua-language-server/3rd/luamake/luamake

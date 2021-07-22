@@ -8,6 +8,8 @@ osx and linux dotfiles
 
 原因：会安装太多依赖的软件，不符合极简
 
+`sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
+
 - [x] neofetch
 - [x] youtube-dl
 - [x] ffmpeg
