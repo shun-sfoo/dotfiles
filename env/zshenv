@@ -1,7 +1,9 @@
+# rust
 source "$HOME/.cargo/env"
 
-## go
+# go
 export GOPATH="$HOME/WorkSpace/golang"
 export PATH="$PATH:$GOPATH/bin"
 export GO111MODULE=on
 export GOPROXY=https://goproxy.io
+
