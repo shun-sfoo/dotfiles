@@ -20,6 +20,26 @@ eval "$(starship init zsh)"
 ## zoxide
 eval "$(zoxide init zsh)"
 
+function gen-format() {
+  if [ "$1" != "" ] 
+  then
+    /usr/local/opt/llvm/bin/clang-format -style="$1" -dump-config > .clang-format
+  else
+    /usr/local/opt/llvm/bin/clang-format -style=google -dump-config > .clang-format
+  fi
+}
+
+function gitall() {
+  git add .
+  if [ "$1" != "" ]
+  then
+    git commit -m "$1"
+  else
+    git commit -m update
+  fi
+  git push
+}
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
 	print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
