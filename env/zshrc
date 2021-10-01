@@ -1,6 +1,8 @@
-# export https_proxy=http://127.0.0.1:7890
-# export http_proxy=http://127.0.0.1:7890 
-# export all_proxy=socks5://127.0.0.1:7891
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890 
+export all_proxy=socks5://127.0.0.1:7891
+
+# source ~/.zshenv
 
 alias ipi="curl cip.cc"
 alias ls="exa --icons"
@@ -12,7 +14,6 @@ alias vim="nvim"
 alias cat="bat"
 alias reload="source ~/.zshrc"
 alias demacs="emacs --dump-file='/Users/neo/.config/emacs/emacs.pdmp'"
-alias gn="~/build/gn/out/gn"
 
 ## starship
 eval "$(starship init zsh)"
@@ -82,11 +83,3 @@ zinit light hlissner/zsh-autopair
 zinit ice depth=1 wait"2" lucid
 zinit light MichaelAquilina/zsh-you-should-use
 ### End of Zinit's installer chunk
-
-alias luamake=/Users/bruce/build/lua-language-server/3rd/luamake/luamake
-
-
-# python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
