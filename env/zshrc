@@ -15,7 +15,7 @@ alias reload="source ~/.zshrc"
 ## starship
 eval "$(starship init zsh)"
 
-[ -f "/home/neo/.ghcup/env" ] && source "/home/neo/.ghcup/env" # ghcup-env
+[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/tools/bin/:$PATH"
