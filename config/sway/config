@@ -3,13 +3,9 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-
+default_border pixel
 ### Variables
-
-# font pango: SourceCodePro Medium 13
-# font pango: Operator 13
-font pango: noto fonts 13
-
+#
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -27,13 +23,17 @@ set $menu wofi --show run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/liuyang/Sources/dotfiles/wallpapers/pinky-astronaut-wallpaper.jpg fill
+
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+output HDMI-A-1 scale 2.0
+gaps inner 5
 
 ### Idle configuration
 #
@@ -61,13 +61,17 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input "type:keyboard" xkb_options ctrl:swapcaps
+
+input "type:keyboard" xkb_options ctrl:nocaps
+
 ### Key bindings
 #
 # Basics:
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    bindsym $mod+F1 exec chromium --ozone-platform-hint=auto --proxy-server="socks://localhost:7891"
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -86,7 +90,7 @@ input "type:keyboard" xkb_options ctrl:swapcaps
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -205,7 +209,20 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-  swaybar_command waybar
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
     }
+}
+
+exec /home/liuyang/tools/bin/clash &
+exec fcitx5 -d
 
 include /etc/sway/config.d/*
