@@ -1,3 +1,2 @@
-export XMODIFIERS=@im=fcitx
-export QT_IM_MODULE=fcitx
-export GTK_IM_MODULE=fcitx
+[ "$(tty)" = "/dev/tty1" ] && exec sway
+
