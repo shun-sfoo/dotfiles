@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -71,7 +71,7 @@ input "type:keyboard" xkb_options ctrl:nocaps
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    bindsym $mod+F1 exec chromium --ozone-platform-hint=auto --proxy-server="socks://localhost:7891"
+    bindsym $mod+F1 exec google-chrome-stable --ozone-platform-hint=auto --proxy-server="socks://localhost:7891"
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -222,7 +222,9 @@ bar {
     }
 }
 
-exec /home/liuyang/tools/bin/clash &
+# exec /home/liuyang/tools/bin/clash &
+set $lockman exec bash ~/.config/sway/lockman.sh
+bindsym $mod+F2 exec $lockman
 exec fcitx5 -d
 
 include /etc/sway/config.d/*
