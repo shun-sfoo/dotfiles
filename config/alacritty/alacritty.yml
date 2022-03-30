@@ -1,3 +1,16 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
+#
+# Imports are loaded in order, skipping all missing files, with the importing
+# file being loaded last. If a field is already present in a previous import, it
+# will be replaced.
+#
+# All imports must either be absolute paths starting with `/`, or paths relative
+# to the user's home directory starting with `~/`.
+#import:
+#  - /path/to/alacritty.yml
+
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -8,10 +21,10 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
+  #TERM: alacritty
   TERM: xterm-256color
 
 window:
-  opacity: 0.7
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -51,6 +64,12 @@ window:
   #     - buttonless: Title bar, transparent background and no title bar buttons
   #decorations: full
 
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 0.7
+
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
@@ -66,7 +85,7 @@ window:
   #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  #dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
@@ -99,16 +118,19 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: FuraMono NF
+    #family: monospace
     family: Operator Mono Book
+
     # The `style` can be specified to pick a specific face.
     style: Regular
+
   # Bold font face
   bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
+    #family: monospace
     family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
@@ -120,6 +142,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
+    #family: monospace
     family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
@@ -131,6 +154,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
+    #family: monospace
     family: Operator Mono Bold Italic
 
     # The `style` can be specified to pick a specific face.
@@ -158,6 +182,13 @@ font:
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
   #use_thin_strokes: true
+
+  # Use built-in font for box drawing characters.
+  #
+  # If `true`, Alacritty will use a custom built-in font for box drawing
+  # characters (Unicode points 2500 - 259f).
+  #
+  #builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -299,6 +330,13 @@ font:
   #
   #indexed_colors: []
 
+  # Transparent cell backgrounds
+  #
+  # Whether or not `window.opacity` applies to all cell backgrounds or only to
+  # the default background. When set to `true` all cells will be transparent
+  # regardless of their background color.
+  #transparent_background_colors: false
+
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -414,6 +452,9 @@ selection:
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 
+# Offer IPC using `alacritty msg` (unix only)
+#ipc_socket: true
+
 mouse:
   # Click settings
   #
@@ -499,8 +540,9 @@ mouse:
 #
 # - `mods` (see key bindings)
 #mouse_bindings:
-#  - { mouse: Right,             action: ExpandSelection }
-#  - { mouse: Middle, mode: ~Vi, action: PasteSelection  }
+#  - { mouse: Right,                 action: ExpandSelection }
+#  - { mouse: Right,  mods: Control, action: ExpandSelection }
+#  - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
 
 # Key bindings
 #
@@ -569,6 +611,8 @@ mouse:
 #   - ToggleFullscreen
 #   - SpawnNewInstance
 #       Spawn a new instance of Alacritty.
+#   - CreateNewWindow
+#       Create a new Alacritty window from the current process.
 #   - ClearLogNotice
 #       Clear Alacritty's UI warning and error notice.
 #   - ClearSelection
@@ -837,3 +881,6 @@ mouse:
 
   # Print all received window events.
   #print_events: false
+
+  # Highlight window damage information.
+  #highlight_damage: false
