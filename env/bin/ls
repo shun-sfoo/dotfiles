@@ -1,0 +1,2 @@
+#!/bin/sh
+ls --hyperlink=auto --color=auto "$@"
