@@ -1,3 +1,5 @@
+pwd = $(shell pwd)
+
 .PHONY: env
 env:
-	ln -s env/fonts.conf ~/test.conf
+	ln -s $(pwd)/env/fonts.conf ~/test.conf
