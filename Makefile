@@ -3,7 +3,7 @@ pwd = $(shell pwd)
 dirs = ~/.config ~/.local/share/fonts
 dotfiles= fonts.conf pam_environment zprofile zshrc
 config = alacritty fcitx5 kitty sway electron-flags.conf wayfire.ini
-fonts = Operator-Mono-with-Lig operator-mono-nerd-font
+fonts = Operator_Mono_with_Lig
 
 all: dir env conf font 
 
