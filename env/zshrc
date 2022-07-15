@@ -1,8 +1,10 @@
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
 export all_proxy=socks5://127.0.0.1:7891
+export EDITOR=nvim
+bindkey -e
 
-[ -e /usr/bin/vivid ] && export LS_COLORS="$(vivid generate one-dark)"
+[ -e /usr/bin/vivid ] && export LS_COLORS="$(vivid generate gruvbox-dark-soft)"
 
 # the detailed meaning of the below three variable can be found in `man zshparam`.
 export HISTFILE=~/.zsh_history
