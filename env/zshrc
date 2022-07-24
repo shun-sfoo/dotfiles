@@ -34,7 +34,6 @@ alias la="exa -la --icons"
 alias tree="exa -T --icons --git-ignore"
 alias vi="nvim"
 alias vim="nvim"
-alias cat="bat"
 alias reload="source ~/.zshrc"
 
 ## rust tools
