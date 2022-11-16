@@ -1,4 +1,4 @@
 # ls /usr/share/rime-data  get the input name
 patch:
   schema_list:
-    - schema: "luna_pinyin_simp"
+    - schema: "double_pinyin_flypy"
