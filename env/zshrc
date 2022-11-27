@@ -35,6 +35,7 @@ alias tree="exa -T --icons --git-ignore"
 alias vi="nvim"
 alias vim="nvim"
 alias reload="source ~/.zshrc"
+alias icat="kitty +kitten icat"
 
 ## rust tools
 [ -e /usr/bin/starship ] && eval "$(starship init zsh)"
