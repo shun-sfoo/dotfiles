@@ -4,8 +4,6 @@ export all_proxy=socks5://127.0.0.1:7891
 export EDITOR=nvim
 bindkey -e
 
-[ -e /usr/bin/vivid ] && export LS_COLORS="$(vivid generate gruvbox-dark-soft)"
-
 # the detailed meaning of the below three variable can be found in `man zshparam`.
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000   # the number of items for the internal history list
@@ -23,8 +21,6 @@ setopt EXTENDED_HISTORY  # record command start time
   && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f "$HOME/.ghcup/env" ]  && source "$HOME/.ghcup/env" # ghcup-env
-
-[ -d ~/.yarn/bin ] && export PATH="$HOME/.yarn/bin/:$PATH"
 
 alias ipi="curl cip.cc"
 alias ls="ls --hyperlink=auto --color=auto"
