@@ -1,16 +1,14 @@
 pwd = $(shell pwd)
 
-dirs = ~/.config ~/.local/share/fonts
-dotfiles= fonts.conf zprofile zshrc
-config = alacritty kitty sway electron-flags.conf
+dirs = ~/.config
+dotfiles= zshrc ideavimrc tmux.conf
+config =  kitty 
 fonts = Operator_Mono_with_Lig
-copyconfig = fcitx5 wayfire.ini
 
-all: dir env conf font cp
+all: dir env conf font
 
 .PHONY: dir
 dir: $(dirs)
-
 
 # NOTE: if a target don't executed, consider target file existed!!!
 # target = file, so if file/dir isn't exist to create it, so dir existed the target will not executed.
@@ -33,10 +31,4 @@ $(config):
 font: $(fonts)
 
 $(fonts):
-	@if ! test -d ~/.local/share/fonts/$@; then echo "copy $@ done" &&  cp -r $(pwd)/share/fonts/$@ ~/.local/share/fonts/; else echo "$@ existed"; fi
-
-.PHONY: cp
-cp: $(copyconfig)
-
-$(copyconfig):
-	@if ! test -e ~/.config/$@; then echo "copy $@ done" && cp -r $(pwd)/config/$@ ~/.config/$@; else echo "$@ existed"; fi
+	cp -r $(pwd)/fonts/$@ ~/Library/Fonts/

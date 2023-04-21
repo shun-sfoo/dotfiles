@@ -1,46 +1,17 @@
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
 export all_proxy=socks5://127.0.0.1:7891
-export EDITOR=nvim
-bindkey -e
 
-# the detailed meaning of the below three variable can be found in `man zshparam`.
-export HISTFILE=~/.zsh_history
-export HISTSIZE=1000000   # the number of items for the internal history list
-export SAVEHIST=1000000   # maximum number of items for the history file
-
-# The meaning of these options can be found in man page of `zshoptions`.
-setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
-setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
-setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
-setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
-setopt EXTENDED_HISTORY  # record command start time
-
-[ -d /usr/share/zsh/plugins ] \
-  && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh \
-  && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-[ -f "$HOME/.ghcup/env" ]  && source "$HOME/.ghcup/env" # ghcup-env
-
-alias ipi="curl cip.cc"
-alias ls="ls --hyperlink=auto --color=auto"
-alias hg="kitty +kitten hyperlinked_grep"
+alias vim="nvim"
+alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
 alias tree="exa -T --icons --git-ignore"
-alias vi="nvim"
-alias vim="nvim"
-alias reload="source ~/.zshrc"
-alias icat="kitty +kitten icat"
+alias dump="brew bundle dump --describe -f"
 
-## rust tools
-[ -e /usr/bin/starship ] && eval "$(starship init zsh)"
-[ -e /usr/bin/zoxide ] && eval "$(zoxide init zsh)"
-[ -e /usr/bin/mcfly ] && eval "$(mcfly init zsh)"
+[ -e /usr/local/bin/starship ] && eval "$(starship init zsh)"
+[ -e /usr/local/bin/zoxide ] && eval "$(zoxide init zsh)"
+[ -e /usr/local/bin/mcfly ] && eval "$(mcfly init zsh)"
 
-## python
-if [[ -d ~/.pyenv ]] {
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init --path)"
-  eval "$(pyenv virtualenv-init -)"
-}
+[[ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
