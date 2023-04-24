@@ -7,7 +7,7 @@ alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
 alias tree="exa -T --icons --git-ignore"
-alias dump="brew bundle dump --describe -f"
+alias dump="brew bundle dump --describe -f  --file ~/WorkSpaces/dotfiles/Brewfile"
 
 [ -e /usr/local/bin/starship ] && eval "$(starship init zsh)"
 [ -e /usr/local/bin/zoxide ] && eval "$(zoxide init zsh)"
