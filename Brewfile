@@ -4,6 +4,8 @@ tap "homebrew/cask-fonts"
 brew "cmake"
 # Modern replacement for 'ls'
 brew "exa"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Language Server for the Lua language
 brew "lua-language-server"
 # Fly through your shell history
@@ -14,10 +16,14 @@ brew "neovim"
 brew "ninja"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
+# Terminal multiplexer
+brew "tmux"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
@@ -28,5 +34,5 @@ brew "zsh-syntax-highlighting"
 cask "font-symbols-only-nerd-font"
 # Free and open-source media player
 cask "iina"
-# GPU-based terminal emulator
-cask "kitty"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
