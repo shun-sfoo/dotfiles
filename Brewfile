@@ -6,22 +6,20 @@ brew "cmake"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Language Server for the Lua language
-brew "lua-language-server"
 # Fly through your shell history
 brew "mcfly"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Small build system for use with gyp or CMake
 brew "ninja"
+# Platform built on V8 to build network applications
+brew "node"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Opinionated Lua code formatter
-brew "stylua"
 # Terminal multiplexer
 brew "tmux"
 # Shell extension to navigate your filesystem faster

@@ -22,5 +22,3 @@ if [[ -d ~/.pyenv ]] {
   eval "$(pyenv init --path)"
   eval "$(pyenv virtualenv-init -)"
 }
-
-[ -f "/Users/neo/.ghcup/env" ] && source "/Users/neo/.ghcup/env" # ghcup-env
