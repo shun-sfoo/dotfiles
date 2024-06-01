@@ -25,9 +25,9 @@ setopt EXTENDED_HISTORY  # record command start time
 alias ipi="curl cip.cc"
 alias ls="ls --hyperlink=auto --color=auto"
 alias hg="kitty +kitten hyperlinked_grep"
-alias ll="exa -l --icons"
-alias la="exa -la --icons"
-alias tree="exa -T --icons --git-ignore"
+# alias ll="exa -l --icons"
+# alias la="exa -la --icons"
+# alias tree="exa -T --icons --git-ignore"
 alias vi="nvim"
 alias vim="nvim"
 alias reload="source ~/.zshrc"
@@ -44,3 +44,4 @@ if [[ -d ~/.pyenv ]] {
   eval "$(pyenv init --path)"
   eval "$(pyenv virtualenv-init -)"
 }
+
