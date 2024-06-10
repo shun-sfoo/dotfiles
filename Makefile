@@ -2,9 +2,9 @@ pwd = $(shell pwd)
 
 dirs = ~/.config ~/.local/share/fonts
 dotfiles= fonts.conf zprofile zshrc
-config = alacritty kitty sway electron-flags.conf
+config = kitty hypr
 fonts = Operator_Mono_with_Lig
-copyconfig = fcitx5 wayfire.ini
+copyconfig = fcitx5
 
 all: dir env conf font cp
 
