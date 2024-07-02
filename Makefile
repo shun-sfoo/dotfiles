@@ -2,7 +2,7 @@ pwd = $(shell pwd)
 
 dirs = ~/.config ~/.local/share/fonts
 dotfiles= fonts.conf zprofile zshrc
-config = kitty hypr
+config = kitty hypr eww
 fonts = Operator_Mono_with_Lig
 copyconfig = fcitx5
 

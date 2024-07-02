@@ -9,3 +9,7 @@ when new version published if some new feature add. Use nvim -d old new to compa
 ## remote
 
 add gitee repo
+
+## eww required
+
+stdbuf, seq, socat, jq
