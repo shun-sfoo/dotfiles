@@ -66,6 +66,9 @@
       "${round((1 - (EWW_DISK["/home"].free / EWW_DISK["/home"].total)) * 100, 0)}%")
     (metric :icon " " :font-size 1.0 "${round(EWW_RAM.used_mem_perc, 0)}%")
     (metric :icon " " :font-size 1.0 "${round(EWW_CPU.avg, 0)}%")
+    ; (metric :icon " " :font-size 1.0 "${round(EWW_NET["enp12s0"].NET_UP, 0)}kb")
+    ; (metric :icon " " :font-size 1.0 "${round(EWW_NET["enp12s0"].NET_DOWN,0)}kb")
+    ; (metric :icon " " :font-size 1.0 "${EWW_TEMPS['AMDGPU_EDGE']}°C")
     (box :class "metric" (date))))
 
 
