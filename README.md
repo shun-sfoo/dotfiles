@@ -2,13 +2,13 @@
 
 ## kitty
 
-to generate new default config by `ctrl+shift+F2`.
+To generate new default Configuration by `ctrl+shift+F2`.
 
-when new version published if some new feature add. Use nvim -d old new to compare.
+When new version published if some new feature add. Use vim -d old new to compare.
 
 ## remote
 
-add gitee repo
+Add gitee repo
 
 ## Use bash instead of zsh
 
@@ -17,3 +17,14 @@ add gitee repo
 ## Fonts
 
 If have any question about fonts, please refer to see `$HOME/.fonts.conf` and [link](https://catcat.cc/post/2021-03-07/)
+
+## Packages
+
+To backup  by use `pacman -Qqe > packages.list`
+
+Count by `pacman -Qqe | wc -l`
+
+Restore by `cat packages.list |tr '\n' ' '` to combine multiple line to one line
+separator by space.
+
+And then use `pacman -S --needed` the preview output.
