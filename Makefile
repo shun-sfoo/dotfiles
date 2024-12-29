@@ -1,8 +1,8 @@
 pwd = $(shell pwd)
 
 dirs = ~/.config ~/.local/share/fonts
-dotfiles= fonts.conf zprofile zshrc
-config = kitty hypr
+dotfiles= fonts.conf inputrc bashrc bash_profile bash_aliases
+config = kitty hypr waybar 
 fonts = Operator_Mono_with_Lig
 copyconfig = fcitx5
 
@@ -10,7 +10,6 @@ all: dir env conf font cp
 
 .PHONY: dir
 dir: $(dirs)
-
 
 # NOTE: if a target don't executed, consider target file existed!!!
 # target = file, so if file/dir isn't exist to create it, so dir existed the target will not executed.

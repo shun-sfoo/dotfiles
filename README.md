@@ -10,6 +10,6 @@ when new version published if some new feature add. Use nvim -d old new to compa
 
 add gitee repo
 
-## eww required
+## Use bash instead of zsh
 
-stdbuf, seq, socat, jq
+## Waybar Configuration
