@@ -13,3 +13,7 @@ add gitee repo
 ## Use bash instead of zsh
 
 ## Waybar Configuration
+
+## Fonts
+
+If have any question about fonts, please refer to see `$HOME/.fonts.conf` and [link](https://catcat.cc/post/2021-03-07/)
