@@ -1,11 +1,11 @@
 pwd = $(shell pwd)
 
 dirs = ~/.config
-dotfiles= zshrc ideavimrc tmux.conf
-config =  kitty 
+dotfiles = zshrc ideavimrc tmux.conf
+config =  kitty
 fonts = Operator_Mono_with_Lig
 
-all: dir env conf font
+all: dir env conf
 
 .PHONY: dir
 dir: $(dirs)
