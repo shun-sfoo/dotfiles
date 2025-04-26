@@ -1,8 +1,8 @@
 pwd = $(shell pwd)
 
 dirs = ~/.config ~/.local/share/fonts
-dotfiles= fonts.conf inputrc bashrc bash_profile bash_aliases
-config = kitty hypr waybar 
+dotfiles= fonts.conf zshrc zprofile
+config = kitty hypr waybar systemd
 fonts = Operator_Mono_with_Lig
 copyconfig = fcitx5
 

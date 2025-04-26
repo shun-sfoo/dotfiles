@@ -1,5 +1,5 @@
 alias ipi="curl cip.cc"
-alias ls="ls --hyperlink=auto --color=auto"
+alias ls="eza --icons --hyperlink"
 alias hg="kitty +kitten hyperlinked_grep"
 alias ll="eza -lh --icons"
 alias la="eza -lha --icons"

@@ -12,6 +12,7 @@
   "modules-right": [
     "cpu",
     "memory",
+    "wireplumber",
     "temperature",
     "clock",
     "tray"
@@ -30,6 +31,14 @@
   },
   "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
   "tray": {
     "spacing": 10

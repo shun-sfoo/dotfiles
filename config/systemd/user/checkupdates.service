@@ -1,0 +1,6 @@
+[Unit]
+Description=Run checkupdates 15min Service
+
+[Service]
+Type=oneshot
+ExecStart=/home/neo/.config/systemd/user/checkupdates.sh
