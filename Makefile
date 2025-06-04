@@ -1,7 +1,7 @@
 pwd = $(shell pwd)
 
 dirs = ~/.config ~/.local/share/fonts
-dotfiles= fonts.conf zshrc zprofile
+dotfiles= fonts.conf zshrc zprofile tmux.conf
 config = kitty hypr waybar systemd
 fonts = Operator_Mono_with_Lig
 copyconfig = fcitx5
